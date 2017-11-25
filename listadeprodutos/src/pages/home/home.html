@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let produto of produtos" (click)="verDetalhe(produto.id)">
+      {{ produto.nome }}
+    </button>  
+  </ion-list>
+
+  <div padding>
+    <button ion-button block (click)="criarTarefa()">Adicionar Produto</button>
+  </div>
+</ion-content>
