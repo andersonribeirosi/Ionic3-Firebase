@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
 
 /**
@@ -22,11 +22,19 @@ export class RegistroPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private fireAuth: AngularFireAuth) {
+    private fireAuth: AngularFireAuth,
+    private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
+  }
+
+  alert(message: string){
+    this.alertCtrl.create({
+      subTitle: message,
+      buttons: ['OK']
+    }).present();
   }
 
   cadastro()
@@ -34,6 +42,7 @@ export class RegistroPage {
     this.fireAuth.auth.createUserWithEmailAndPassword(this.usuario.value, this.senha.value)
     .then(data => {
       console.log(data);
+      this.alert('Registrado com Sucesso');
   })
   .catch( error => {
     console.log(error);
