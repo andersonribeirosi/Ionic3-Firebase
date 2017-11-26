@@ -28,7 +28,7 @@ export class LoginPage {
 
   login()
   {
-    console.log('Would sign in with ', this.usuario.value, this.senha.value);
+    console.log(this.usuario.value, this.senha.value);
   }
 
 }

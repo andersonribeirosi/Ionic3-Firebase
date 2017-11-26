@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireAuth } from "angularfire2/auth";
 
 /**
  * Generated class for the RegistroPage page.
@@ -18,7 +19,10 @@ export class RegistroPage {
   @ViewChild('usuario') usuario;
   @ViewChild('senha') senha;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private fireAuth: AngularFireAuth) {
   }
 
   ionViewDidLoad() {
@@ -27,7 +31,14 @@ export class RegistroPage {
 
   cadastro()
   {
-    console.log('Would register user with ', this.usuario.value, this.senha.value);
+    this.fireAuth.auth.createUserWithEmailAndPassword(this.usuario.value, this.senha.value)
+    .then(data => {
+      console.log(data);
+  })
+  .catch( error => {
+    console.log(error);
+  });
+    console.log(this.usuario.value, this.senha.value);
   }
 
 }
