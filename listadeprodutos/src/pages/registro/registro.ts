@@ -46,6 +46,7 @@ export class RegistroPage {
   })
   .catch( error => {
     console.log(error);
+      this.alert(error.message);
   });
     console.log(this.usuario.value, this.senha.value);
   }

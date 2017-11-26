@@ -9,11 +9,20 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="let produto of produtos" (click)="verDetalhe(produto.id)">
+      <div>
       {{ produto.nome }}
+      </div>
+      <div>
+        {{produto.valor}}
+      </div>
     </button>  
   </ion-list>
 
   <div padding>
     <button ion-button block (click)="criarTarefa()">Adicionar Produto</button>
+  </div>
+
+  <div padding>
+    <button ion-button block (click)="logout()">Logout</button>
   </div>
 </ion-content>

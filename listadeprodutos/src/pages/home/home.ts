@@ -4,6 +4,7 @@ import { ProdutosService } from '../../services/produtos.service';
 
 import { DetalhesPage } from '../detalhes/detalhes';
 import { Component } from '@angular/core';
+import { InicioPage } from '../inicio/inicio';
 
 @Component({
   selector: 'page-home',
@@ -33,6 +34,12 @@ export class HomePage {
   criarTarefa()
   {
     this.nav.push(DetalhesPage, {id: 0});
+  }
+
+
+  logout()
+  {
+    this.navCtrl.push(InicioPage);
   }
 
 }

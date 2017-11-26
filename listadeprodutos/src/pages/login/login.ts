@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { AngularFireAuth } from "angularfire2/auth";
 import { HomePage } from '../home/home';
 
-
 /**
  * Generated class for the LoginPage page.
  *
@@ -53,5 +52,4 @@ export class LoginPage {
     })
     console.log(this.usuario.value, this.senha.value);
   }
-
 }
