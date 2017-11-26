@@ -34,9 +34,4 @@ export class InicioPage {
     this.navCtrl.push(RegistroPage);
   }
 
-
-  //ionViewDidLoad() {
-    //console.log('ionViewDidLoad InicioPage');
-  //}
-
 }
