@@ -1,8 +1,9 @@
+import { NavController } from 'ionic-angular';
 import { ProdutosService } from '../../services/produtos.service';
 
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+
 import { DetalhesPage } from '../detalhes/detalhes';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'page-home',

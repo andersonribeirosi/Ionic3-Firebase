@@ -1,0 +1,10 @@
+page-inicio {
+    #topButtons{
+        display: felx;
+        flex-direction: row; 
+    }
+
+    #topButtons button {
+        flex: 1;
+    }
+}

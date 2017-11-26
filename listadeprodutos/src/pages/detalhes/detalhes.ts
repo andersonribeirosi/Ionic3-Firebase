@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutosService } from '../../services/produtos.service';
 
 /**
- * Generated class for the DetalhePage page.
+ * Generated class for the DetalhesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -22,7 +22,7 @@ export class DetalhesPage {
     this.id = navParams.get('id');
     if(this.id != 0)
     {
-      //this.nota = notasService.getNota(this.id);
+      
       produtosService.getProduto(this.id)
         .valueChanges().subscribe((produto) =>{
           this.produto = produto;
@@ -31,8 +31,7 @@ export class DetalhesPage {
     }else{
       this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
     }
-    //console.log(this.nota);
-  }
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetalhesPage');

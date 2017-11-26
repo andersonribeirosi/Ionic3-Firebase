@@ -1,3 +1,6 @@
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
 import { DetalhesPage } from './../pages/detalhes/detalhes';
 import { ProdutosService } from '../services/produtos.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,15 +12,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { firebaseconfig } from '../firebase.config';
-import { AngularFireModule } from "angularfire2";
-import { AngularFireAuthModule } from "angularfire2/auth";
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { LoginPage } from '../pages/login/login';
+import { RegistroPage } from '../pages/registro/registro';
+import { InicioPage } from '../pages/inicio/inicio';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetalhesPage
+    DetalhesPage,
+    LoginPage,
+    RegistroPage,
+    InicioPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   entryComponents: [
     MyApp,
     HomePage,
-    DetalhesPage
+    DetalhesPage,
+    LoginPage,
+    RegistroPage,
+    InicioPage
   ],
   providers: [
     StatusBar,
