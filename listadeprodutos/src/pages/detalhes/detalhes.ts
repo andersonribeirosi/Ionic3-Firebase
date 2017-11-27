@@ -1,6 +1,8 @@
+import { InicioPage } from './../inicio/inicio';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutosService } from '../../services/produtos.service';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the DetalhesPage page.
@@ -43,6 +45,7 @@ export class DetalhesPage {
     this.produtosService.store(this.produto);
     this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
     alert('Criado com sucesso');
+    this.navCtrl.push(HomePage);
   }
 
   removerTarefa()
@@ -50,6 +53,7 @@ export class DetalhesPage {
     this.produtosService.remover(this.produto.id);
     this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
     alert('Removido com sucesso');
+    this.navCtrl.push(InicioPage);
   }
 
 }

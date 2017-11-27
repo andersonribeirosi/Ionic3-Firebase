@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
@@ -42,13 +43,14 @@ export class RegistroPage {
     this.fireAuth.auth.createUserWithEmailAndPassword(this.usuario.value, this.senha.value)
     .then(data => {
       console.log(data);
-      this.alert('Registrado com Sucesso');
+      this.alert('Registrado com Sucesso: ' + this.usuario.value);
   })
   .catch( error => {
     console.log(error);
       this.alert(error.message);
   });
     console.log(this.usuario.value, this.senha.value);
+    this.navCtrl.push(LoginPage);
   }
 
 }
