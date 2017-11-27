@@ -1,0 +1,47 @@
+<!--
+  Generated template for the CadastroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro de Produtos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+  
+  <ion-content padding>
+    <ion-item>
+      <ion-label color="primary" fixed>Produto</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label color="primary">Descrição</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="produto.descricao"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label color="primary">Valor</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="produto.valor"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label color="primary">Quantidade</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="produto.qntEstoque"></ion-input>
+    </ion-item>
+  
+    <div padding>
+      <button ion-button block (click)="guardarTarefa()">Salvar Produto</button>
+    </div>
+
+  </ion-content>
+  
+
+</ion-content>

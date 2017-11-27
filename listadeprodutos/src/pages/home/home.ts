@@ -5,13 +5,13 @@ import { ProdutosService } from '../../services/produtos.service';
 import { DetalhesPage } from '../detalhes/detalhes';
 import { Component } from '@angular/core';
 import { InicioPage } from '../inicio/inicio';
+import { CadastroPage } from '../cadastro/cadastro';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
   produtos = [];
   id = null;
 
@@ -33,9 +33,8 @@ export class HomePage {
 
   criarTarefa()
   {
-    this.nav.push(DetalhesPage, {id: 0});
+    this.nav.push(CadastroPage, {id: 0});
   }
-
 
   logout()
   {

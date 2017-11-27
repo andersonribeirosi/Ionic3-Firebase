@@ -1,11 +1,10 @@
-import { InicioPage } from './../inicio/inicio';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ProdutosService } from '../../services/produtos.service';
 import { HomePage } from '../home/home';
+import { ProdutosService } from '../../services/produtos.service';
 
 /**
- * Generated class for the DetalhesPage page.
+ * Generated class for the CadastroPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,10 +12,10 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-detalhes',
-  templateUrl: 'detalhes.html',
+  selector: 'page-cadastro',
+  templateUrl: 'cadastro.html',
 })
-export class DetalhesPage {
+export class CadastroPage {
   id = null;
   produto:any = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
 
@@ -36,7 +35,7 @@ export class DetalhesPage {
 }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetalhesPage');
+    console.log('ionViewDidLoad CadastroPage');
   }
 
   guardarTarefa()
@@ -45,14 +44,6 @@ export class DetalhesPage {
     this.produtosService.store(this.produto);
     this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
     alert('Criado com sucesso');
-    this.navCtrl.push(HomePage);
-  }
-
-  removerTarefa()
-  {
-    this.produtosService.remover(this.produto.id);
-    this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
-    alert('Removido com sucesso');
     this.navCtrl.push(HomePage);
   }
 

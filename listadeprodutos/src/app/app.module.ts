@@ -1,3 +1,4 @@
+import { CadastroPage } from './../pages/cadastro/cadastro';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
@@ -24,7 +25,8 @@ import { InicioPage } from '../pages/inicio/inicio';
     DetalhesPage,
     LoginPage,
     RegistroPage,
-    InicioPage
+    InicioPage,
+    CadastroPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { InicioPage } from '../pages/inicio/inicio';
     DetalhesPage,
     LoginPage,
     RegistroPage,
-    InicioPage
+    InicioPage,
+    CadastroPage
   ],
   providers: [
     StatusBar,
