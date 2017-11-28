@@ -43,7 +43,7 @@ export class LoginPage {
     this.fireAuth.auth.signInWithEmailAndPassword(this.usuario.value, this.senha.value)
     .then(data => {
       console.log(data, this.fireAuth.auth.currentUser);
-      this.alert('Logado com Sucesso!');
+      this.alert('Logado com Sucesso! ' + this.usuario.value);
       this.navCtrl.setRoot(HomePage);
     })
     .catch(error => {

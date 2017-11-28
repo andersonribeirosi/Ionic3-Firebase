@@ -43,7 +43,7 @@ export class CadastroPage {
     this.produto.id = Date.now();
     this.produtosService.store(this.produto);
     this.produto = {id:"", nome: "", descricao: "", valor: "", qntEstoque: ""};
-    alert('Criado com sucesso');
+    alert('Produto cadastrado com sucesso!');
     this.navCtrl.push(HomePage);
   }
 
